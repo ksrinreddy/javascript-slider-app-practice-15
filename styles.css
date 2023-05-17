@@ -1,0 +1,146 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.slider-container {
+    position: relative;
+    width: 80vw;
+    height: 45vh;
+    max-width: 80rem;
+    overflow: hidden;
+    margin: 4rem auto 1rem auto;
+    border: 3px solid rgb(255, 174, 0);
+    border-radius: 5px;
+
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgb(77, 167, 235);
+    color: white;
+    text-align: center;
+    transition: 300ms;
+}
+
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide h1 {
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+}
+
+.slide h4 {
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.person-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.slide:nth-child(1) h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("./img-2.jpeg") center/cover no-repeat;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.prev-btn,
+.next-btn {
+    background-color: transparent;
+    border: 1px solid rgba(0, 136, 255, 0.1);
+    border-radius: 5px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: 300ms;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 136, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* set slider */
+/* .slide:nth-child(1) {
+    left: 0;
+}
+
+.slide:nth-child(2) {
+    left: 100%;
+}
+
+.slide:nth-child(3) {
+    left: 200%;
+}
+
+.slide:nth-child(4) {
+    left: 300%;
+}
+
+.slide {
+    transform: translateX(0);
+} */
+
+/* media queries */
+@media screen and (min-width:560px) {
+    .slider-container {
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .slider-container {
+        height: 65vh;
+    }
+}
+
+@media screen and (min-width:980px) {
+    .slider-container {
+        height: 70vh;
+    }
+}
